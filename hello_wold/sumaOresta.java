@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class sumaOresta {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.println("Ingrese el primer numero");
+        System.out.println("Ingrese el primer numero 1");
         int num1 = input.nextInt();
         System.out.println("Ingrese el segundo numero");
         int num2 = input.nextInt();
