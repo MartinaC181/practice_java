@@ -15,6 +15,6 @@ public class ejer7_claveDescuento {
         if (clave == 01){
             System.out.println("");
         }
+        input.close();
     }
-    
 }
