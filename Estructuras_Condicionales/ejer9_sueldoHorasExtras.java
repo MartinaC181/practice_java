@@ -30,6 +30,6 @@ public class ejer9_sueldoHorasExtras {
             System.out.println("El trabajador no hizo horas extras");
         }
 
-        //input.close();
+        input.close();
     }
 }
