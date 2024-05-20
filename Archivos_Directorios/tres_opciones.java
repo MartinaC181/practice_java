@@ -12,17 +12,21 @@ import java.util.Scanner;
 public class tres_opciones {
     public static void main(String[] args) {
         Scanner leer= new Scanner(System.in);
-
+        int opcion = 0;
 
         System.out.println("--- MENU ---");
-        System.out.println("");
+        System.out.println("`");
         System.out.println("1 - Crear archivo");
         System.out.println("2 - Listar archivos");
         System.out.println("3 - Salir");
-        System.out.println("");
-
-        System.out.print("Seleccione una opción: ");
-        int opcion= leer.nextInt();
+        System.out.println("`");
+        try {
+            System.out.print("Seleccione una opción: ");
+            int aux = leer.nextInt();
+            opcion = aux;
+        } catch (Exception e) {
+            System.out.println("Solo se admiten números");
+        }
 
         switch (opcion){
 
@@ -71,8 +75,25 @@ public class tres_opciones {
             case 3:
                 System.out.println("Gracias vuelva prontos");
                 break;
+            case 4:
+                System.out.println("¿Qué archivo desea eliminar?");
+                String arch= leer.next();
+
+                File archivo1 = new File(arch);
+                if (archivo1.delete()) {
+                    System.out.println("Archivo eliminado exitosamente.");
+                } else {
+                    System.out.println("Error al eliminar el archivo.");
+                }
+                /**try {
+                    archivo1.delete();
+                    System.out.println("Archivo eliminado exitosamente");
+                } catch (IOException e) {
+                    System.out.println("Error: no se encuentra el archivo");
+                }**/
+                break;
             default:
-                System.out.println("Opcion no válida");
+                System.out.println("Opción no válida");
                 break;
 
         }
